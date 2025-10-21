@@ -1,1 +1,82 @@
-@import url(base.css)
+@import url(base.css);
+
+.header{
+    position: fixed;
+    width: 100%;
+    padding: .5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+    border: 1px solid;
+}
+.header img{
+    width: 160px;
+    height: 50px;
+}
+
+.mobile-icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .9rem;
+    width: 50px;
+    height: 50px;
+    padding: .4rem;
+    background-color: transparent;
+}
+.mobile-icon span{
+    width: 100%;
+    height: 2px;
+    background-color: var(--bg-light);
+}
+
+.menu-desktop{
+    display: none;
+}
+
+.side-menu{
+    display: none;
+    position: fixed;
+    top: 0;
+}
+
+.hero{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.hero img{
+    width: 100%;
+    height: 100dvh;
+    object-fit: cover;
+}
+
+.hero-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    height: 100dvh;
+    padding-inline: 1rem;
+}
+.hero-left h1{
+    font-size: clamp(3rem, 6vw, 5rem);
+}
+.hero-left p{
+    width: 350px;
+    margin-bottom: 1rem;
+}
+.hero-left button{
+    padding: 20px;
+    font-size: 1.2rem;
+    border-radius: 40px;
+    border: 1px solid;
+}
+
+
+@media screen and (min-width: 992px) {
+    .hero{
+        grid-template-columns: 1fr 1fr;
+    }
+}

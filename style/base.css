@@ -35,6 +35,6 @@ button{
     cursor: pointer;
     text-transform: uppercase;
     font-family: var(--button-font);
-    font-weight: 600;
+    font-weight: 700;
     border: none;
 }
