@@ -8,10 +8,14 @@
     --bg: hsl(60, 20%, 90%);
     --bg-light: hsl(60, 20%, 100%);
     --accent: hsl(223, 93%, 45%);
+    --title: hsl(0, 0%, 5%);
+    --text: hsl(0, 0%, 15%);
 
     --title-font: "Poppins", arial, sans-serif;
     --text-font: "Source Sans 3", arial, sans-serif;
     --button-font: "Raleway", arial, sans-serif;
+
+    --transition-time: .4s;
 }
 
 *{
@@ -29,6 +33,11 @@ body{
 h1, h2, h3{
     text-transform: uppercase;
     font-family: var(--title-font);
+    color: var(--title);
+}
+
+p{
+    color: var(--text);
 }
 
 button{

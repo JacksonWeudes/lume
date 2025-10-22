@@ -1,5 +1,9 @@
 @import url(base.css);
 
+img{
+    width: 100%;
+}
+
 .header{
     position: fixed;
     width: 100%;
@@ -20,7 +24,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: .9rem;
     width: 50px;
     height: 50px;
     padding: .4rem;
@@ -30,6 +33,20 @@
     width: 100%;
     height: 2px;
     background-color: var(--bg-light);
+    transition: transform .3s ease-in-out;
+}
+
+.mobile-icon span:nth-child(1){
+    transform: translateY(-6px);
+}
+.mobile-icon span:nth-child(2){
+    transform: translateY(6px);
+}
+.mobile-icon.active span:nth-child(1){
+    transform: rotate(45deg) translateX(2px);
+}
+.mobile-icon.active span:nth-child(2){
+    transform: rotate(-45deg);   
 }
 
 .menu-desktop{
@@ -37,9 +54,65 @@
 }
 
 .side-menu{
-    display: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     position: fixed;
-    top: 0;
+    top: 67px;
+    right: -70%;
+    width: 65%;
+    height: 100dvh;
+    z-index: 9999;
+    border: 1px solid;
+    background-color: var(--bg);
+    transition: right var(--transition-time) ease-in-out;
+}
+.side-menu ul{
+    width: 100%;
+    margin-bottom: 60%;
+    list-style: none;
+}
+.side-menu li{
+    width: 105%;
+    margin-block: .5rem;
+}
+.side-menu a{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: .5rem;
+    width: 90%;
+    padding: 15px 20px;
+    margin-left: .5rem;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: var(--text);
+    border-bottom: 1px solid;
+}
+.side-menu button{
+    display: block;
+    width: 80%;
+    padding: 15px 20px;
+    margin: auto;
+    margin-top: 3.2rem;
+    font-size: 1.2rem;
+    border: 1px solid;
+    border-radius: 40px;
+}
+.side-menu.active{
+    right: 0;
+}
+
+.socials-menu{
+    position: absolute;
+    bottom: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    bottom: 100px;
+}
+.socials-menu a{
+    font-size: 1.6rem;
+    border: 1px solid;
 }
 
 .hero{
@@ -48,7 +121,7 @@
 }
 .hero img{
     width: 100%;
-    height: 100dvh;
+    height: 130dvh;
     object-fit: cover;
 }
 
@@ -61,7 +134,7 @@
     padding-inline: 1rem;
 }
 .hero-left h1{
-    font-size: clamp(3rem, 6vw, 5rem);
+    font-size: clamp(3rem, 6vw, 4.5rem);
 }
 .hero-left p{
     width: 350px;
@@ -69,7 +142,7 @@
 }
 .hero-left button{
     padding: 20px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     border-radius: 40px;
     border: 1px solid;
 }
