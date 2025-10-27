@@ -16,9 +16,10 @@ img{
 }
 .header.active{
     background-color: var(--accent);
+    box-shadow: 0 3px 5px #00000034;
 }
 .header img{
-    width: 160px;
+    width: 170px;
     height: 50px;
 }
 
@@ -54,6 +55,36 @@ img{
 
 .menu-desktop{
     display: none;
+}
+.menu-desktop a{
+    position: relative;
+    margin-inline: .8rem;
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: var(--bg-light);
+}
+.menu-desktop a:before{
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--bg-light);
+    transition: width .3s ease-in-out;
+}
+.menu-desktop a:hover::before{
+    width: 100%;
+}
+
+.menu-desktop button{
+    width: 170px;
+    padding-block: 15px;
+    border-radius: 40px;
+    font-size: 1.1rem;
+    border: 1px solid var(--bg-light);
+    color: var(--bg-light);
+    background-color: var(--accent);
 }
 
 .side-menu{
@@ -123,6 +154,7 @@ img{
     grid-template-columns: 1fr;
 }
 .hero img{
+    display: none;
     width: 100%;
     height: 110dvh;
     object-fit: cover;
@@ -135,7 +167,8 @@ img{
     align-items: start;
     height: 110dvh;
     padding-inline: 1rem;
-    background-color: var(--accent);
+    background: url(../assets/imgs/hero-mobile-img.jpg) no-repeat;
+    background-size: cover;
 }
 .hero-left h1{
     font-size: clamp(3rem, 6vw, 4.5rem);
@@ -151,9 +184,8 @@ img{
     font-size: 1.1rem;
     border-radius: 40px;
     border: 2px solid;
-    background-color: transparent;
+    background-color: var(--accent);
     color: var(--bg-light);
-    transition: background-color var(--transition-time) ease-in-out;
 }
 .hero-left button:hover{
     background-color: var(--bg-light);
@@ -161,7 +193,7 @@ img{
 }
 
 .services{
-    padding-block: 3rem;
+    padding-block: 3rem 0;
 }
 
 .services-box{
@@ -180,9 +212,10 @@ img{
     height: 100dvh;
     padding: 1rem;
     margin: auto;
+    border-radius: 15px;
     text-decoration: none;
     box-shadow: 3px 3px 10px #00000056;
-    transition: transform var(--transition-time) ease-in-out;
+    transition: transform .3s ease-in-out;
 }
 .services-card h3{
     font-size: clamp(1.2rem, 4vw, 1.5rem);
@@ -193,7 +226,7 @@ img{
     color: var(--bg);
 }
 .services-card:hover{
-    transform: scale(1.01);
+    transform: scale(1.02);
 }
 
 .services-card:nth-child(1){
@@ -231,15 +264,16 @@ img{
     width: 200px;
     padding: 15px 20px;
     margin: auto;
-    font-size: 1.1rem;
     border-radius: 40px;
     border: 1px solid;
+    color: var(--bg-light);
+    background-color: var(--accent);
 }
 
 .why-us{
     display: grid;
     grid-template-columns: 1fr;
-    padding-block: 3rem;
+    padding-block: 0 3rem;
 }
 
 .why-us-box{
@@ -247,7 +281,6 @@ img{
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    border: 1px solid;
 }
 
 .why-card{
@@ -327,6 +360,9 @@ img{
     height: 220px;
     padding: 1rem;
     border-radius: 15px;
+}
+.slider-card p{
+    font-size: 1rem;
 }
 
 .review-head{
@@ -434,10 +470,24 @@ img{
 }
 
 @media screen and (min-width: 992px) {
+    .mobile-icon{
+        display: none;
+    }
+    .menu-desktop{
+        display: block;
+    }
+
     .hero{
         grid-template-columns: 1fr 1fr;
     }
-    
+    .hero img{
+        display: block;
+    }
+    .hero-left{
+        background: none;
+        background-color: var(--accent);
+    }
+
     .services-box{
         grid-template-columns: repeat(4, 1fr);
         gap: 0;
@@ -449,15 +499,54 @@ img{
     .about{
         grid-template-columns: repeat(2, 1fr);
     }
+    .about img{
+        height: 120dvh;
+    }
     .about-text{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-        padding: 0;
+        height: 120dvh;
+        padding-inline: 5rem 0;
+        background-color: var(--accent);
+    }
+    .about-text h2{
+        text-align: start;
+        color: var(--bg-light);
+    }
+    .about-text p{
+        width: 80%;
+        text-align: start;
+        color: var(--bg);
+    }
+    .about-text button{
+        margin: 0;
+        color: var(--bg-light);
+        background-color: transparent;
+    }
+    .about-text button:hover{
+        background-color: var(--bg-light);
+        color: var(--accent);
     }
 
     .why-us{
         grid-template-columns: 1fr 1fr;
+    }
+    .why-us img{
+        height: 120dvh;
+    }
+    .why-us-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 120dvh;
+        background-color: var(--accent);
+    }
+    .why-us-box h2{
+        color: var(--bg-light);
+    }
+    .why-card{
+        background-color: var(--bg);
     }
 }
