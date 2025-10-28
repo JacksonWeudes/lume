@@ -2,10 +2,15 @@ function toggleMenu()
 {
     const sideMenu   = document.querySelector(".side-menu")
     const menuButton = document.querySelector(".mobile-icon")
+    const header = document.querySelector(".header")
     
     menuButton.addEventListener("click", () => {
         menuButton.classList.toggle("active")
         sideMenu.classList.toggle("active")
+
+        if(window.scrollY == 0){
+            header.classList.toggle("active")
+        }
     }) 
 }
 
