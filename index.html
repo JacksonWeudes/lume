@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/regular/style.css">
 </head>
 <body>
+    <div class="overlay"></div>
 
     <header class="header">
         <img src="assets/logos/logo.png" alt="lume-logo" class="logo">
@@ -20,20 +21,35 @@
 
         <nav class="menu-desktop">
             <a href="#">HOME</a>
-            <a href="#">SERVIÇOS</a>
-            <a href="#">DIFERENCIAIS</a>
-            <a href="#">SOBRE</a>
-            <a href="#">CONTATO</a>
+            <a href="#area1">SERVIÇOS</a>
+            <a href="#area3">DIFERENCIAIS</a>
+            <a href="#area2">SOBRE</a>
+            <a href="#area4">CONTATO</a>
             <button>agendar</button>
         </nav>
 
         <nav class="side-menu">
             <ul>
-                <li><a href="#"><i class="ph ph-house"></i>HOME</a></li>
-                <li><a href="#"><i class="ph ph-briefcase"></i>SERVIÇOS</a></li>
-                <li><a href="#"><i class="ph ph-star"></i>DIFERENCIAIS</a></li>
-                <li><a href="#"><i class="ph ph-info"></i>SOBRE</a></li>
-                <li><a href="#"><i class="ph ph-phone"></i>CONTATO</a></li>
+                <li>
+                    <a href="#" class="side-link"><i class="ph ph-house"></i>HOME</a>
+                </li>
+
+                <li>
+                    <a href="#area1" class="side-link"><i class="ph ph-briefcase"></i>SERVIÇOS</a>
+                </li>
+
+                <li>
+                    <a href="#area3" class="side-link"><i class="ph ph-star"></i>DIFERENCIAIS</a>
+                </li>
+
+                <li>
+                    <a href="#area2" class="side-link"><i class="ph ph-info"></i>SOBRE</a>
+                </li>
+
+                <li>
+                    <a href="#area4" class="side-link"><i class="ph ph-phone"></i>CONTATO</a>
+                </li>
+
                 <button>agendar</button>
             </ul>
 
@@ -59,7 +75,7 @@
             <img src="assets/imgs/hero-img.jpg" alt="hero banner">
         </section>
 
-        <section class="services">
+        <section class="services" id="area1">
             <h2>confira nossas serviços</h2>
 
             <div class="services-box">
@@ -101,7 +117,7 @@
             </div>
         </section>
 
-        <section class="about">
+        <section class="about" id="area2">
             <img src="assets/imgs/img1.jpg" alt="equipe">
 
             <div class="about-text">
@@ -124,7 +140,7 @@
             <p>Venha fazer parte de 10 anos de excelência!</p>
         </section>
 
-        <section class="why-us">
+        <section class="why-us" id="area3">
             <div class="why-us-box">
                 <h2>porque nos escolher?</h2>
 
@@ -139,6 +155,8 @@
                     </p>
                 </div>
 
+                <i class="ph ph-check-circle"></i>
+
                 <div class="why-card">
                     <div class="card-head">
                         <i class="ph ph-handshake"></i>
@@ -149,6 +167,8 @@
                         Oferecemos excelência em odontologia com valores    acessíveis e opções que cabem no seu orçamento.
                     </p>
                 </div>
+
+                <i class="ph ph-check-circle"></i>
 
                 <div class="why-card">
                     <div class="card-head">
@@ -567,7 +587,7 @@
             <button>agendar consulta</button>
         </section>
 
-        <section class="sub-footer">
+        <section class="sub-footer" id="area4">
             <div class="footer-logo">
                 <img src="assets/logos/logo.png" alt="lume logo">
 
@@ -622,7 +642,7 @@
 
     <footer class="footer">
         <p>
-            Projeto autoral: design e código por <a href="#">Jackson Weudes</a>.
+            Projeto autoral: design e código por <strong><a href="#">Jackson Weudes</a></strong>.
         </p>
     </footer>
     

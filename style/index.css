@@ -1,5 +1,19 @@
 @import url(base.css);
 
+
+body.active{
+    overflow-y: hidden;
+}
+
+.overlay.active{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background-color: #0000004b;
+    backdrop-filter: blur(5px);
+}
+
 img{
     width: 100%;
 }
@@ -250,8 +264,6 @@ img{
 .services-card:hover::before{
     height: 500px;
 }
-
-
 .services-card h3{
     font-size: clamp(1.2rem, 4vw, 1.5rem);
     color: var(--bg-light);
@@ -285,11 +297,11 @@ img{
     display: grid;
     grid-template-columns: 1fr;
     padding-block: 3rem 0;
-    background-color: var(--accent);
 }
 
 .about-text{
     padding: 1rem 1.5rem;
+    background-color: var(--accent);
 }
 .about-text p{
     margin-block: 1rem;
@@ -320,20 +332,36 @@ img{
     grid-template-columns: 1fr;
     padding-block: 0 3rem;
 }
+.why-us h2{
+    color: var(--bg-light);
+}
 
 .why-us-box{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+    padding-block: 3rem;
+    background-color: var(--accent);
+}
+.ph-check-circle{
+    width: 80%;
+    padding-inline: 1.5rem;
+    font-size: 3rem;
+    align-self: start;
 }
 
 .why-card{
     width: 80%;
-    padding: 2rem 1rem;
-    border: 1px solid;
-    border-radius: 15px;
-    box-shadow: 3px 3px 10px #00000056;
+    padding: 1rem;
+    border-left: 2px solid var(--bg-light);
+}
+.why-card h3{
+    color: var(--bg-light);
+}
+.why-card p{
+    margin-block: 1rem;
+    color: var(--bg);
 }
 
 .card-head{
@@ -344,11 +372,9 @@ img{
 }
 .card-head i{
     font-size: 1.7rem;
-    color: var(--title);
+    color: var(--bg-light);
 }
-.why-card p{
-    margin-block: 1rem;
-}
+
 
 .reviews{
     padding-block: 3rem;
@@ -519,6 +545,15 @@ img{
     border: 1px solid;
     border-radius: 40px;
     text-align: center;
+    color: var(--bg-light);
+    background-color: transparent;
+}
+.contact button:hover{
+    background-color: var(--bg-light);
+    color: var(--accent);
+}
+.contact button:hover i{
+    color: var(--accent);
 }
 
 .footer{
@@ -608,13 +643,9 @@ img{
         justify-content: center;
         align-items: center;
         height: 120dvh;
-        background-color: var(--accent);
     }
-    .why-us-box h2{
-        color: var(--bg-light);
-    }
-    .why-card{
-        background-color: var(--bg);
+    .ph-check-circle{
+        padding-inline: 2.7rem;
     }
 
     .sub-footer{
