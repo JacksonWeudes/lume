@@ -303,6 +303,9 @@ img{
     padding: 1rem 1.5rem;
     background-color: var(--accent);
 }
+.about-text h2{
+    color: var(--bg-light);
+}
 .about-text p{
     margin-block: 1rem;
     text-align: center;
@@ -318,6 +321,10 @@ img{
     color: var(--bg-light);
     background-color: var(--accent);
 }
+.about-text button:hover{
+    background-color: var(--bg-light);
+    color: var(--accent);
+}
 
 .statement{
     padding-block: 10rem;
@@ -325,6 +332,9 @@ img{
     background: url(../assets/imgs/bg.jpg) no-repeat;
     background-size: cover;
     background-attachment: fixed;
+}
+.statement p{
+    font-size: 1.2rem;
 }
 
 .why-us{
@@ -340,15 +350,9 @@ img{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
     padding-block: 3rem;
     background-color: var(--accent);
-}
-.ph-check-circle{
-    width: 80%;
-    padding-inline: 1.5rem;
-    font-size: 3rem;
-    align-self: start;
 }
 
 .why-card{
@@ -374,7 +378,6 @@ img{
     font-size: 1.7rem;
     color: var(--bg-light);
 }
-
 
 .reviews{
     padding-block: 3rem;
@@ -571,7 +574,24 @@ img{
     text-decoration: underline;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 769px) and (max-width: 999px){
+    .mobile-icon{
+        display: none;
+    }
+    .menu-desktop{
+        display: block;
+    }
+    .menu-desktop button{
+        display: none;
+    }
+
+    .services-box{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
+
+@media screen and (min-width: 992px){
     .mobile-icon{
         display: none;
     }
@@ -626,10 +646,7 @@ img{
         color: var(--bg-light);
         background-color: transparent;
     }
-    .about-text button:hover{
-        background-color: var(--bg-light);
-        color: var(--accent);
-    }
+
 
     .why-us{
         grid-template-columns: 1fr 1fr;
