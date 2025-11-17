@@ -53,5 +53,6 @@ button{
     font-family: var(--button-font);
     font-weight: 700;
     border: none;
+    color: var(--bg-light);
     transition: all var(--transition-time) ease-in-out;
 }

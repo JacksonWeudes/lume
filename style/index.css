@@ -220,6 +220,19 @@ img{
 .services{
     padding-block: 3rem 0;
 }
+.services button{
+    display: block;
+    padding: 20px;
+    margin: auto;
+    font-size: 1.1rem;
+    border: 1px solid var(--bg-light);
+    border-radius: 40px;
+    background-color: var(--accent);
+}
+.services button:hover{
+    background-color: var(--bg-light);
+    color: var(--accent);
+}
 
 .services-box{
     display: grid;
@@ -235,7 +248,7 @@ img{
     justify-content: end;
     gap: .5rem;
     width: 80%;
-    height: 100dvh;
+    height: 400px;
     padding: 1rem;
     margin: auto;
     border-radius: 15px;
@@ -430,11 +443,12 @@ img{
     flex-direction: column;
     justify-content: center;
     gap: 1rem;
-    border: 1px solid;
     width: 350px;
     height: 220px;
     padding: 1rem;
+    border: 1px solid var(--text);
     border-radius: 15px;
+    background-color: var(--bg-light);
 }
 .slider-card p{
     font-size: 1rem;
@@ -616,6 +630,7 @@ img{
     }
     .services-card{
         width: 90%;
+        height: 80dvh;
     }
 
     .about{
