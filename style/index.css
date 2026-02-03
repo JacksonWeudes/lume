@@ -420,6 +420,7 @@ img{
     display: flex;
     gap: 1rem;
     padding-right: 1rem;
+    overflow-x: none;
 }
 .slider#left{
     animation: spin-left 60s linear infinite;
