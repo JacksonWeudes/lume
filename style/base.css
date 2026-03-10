@@ -36,6 +36,10 @@ h1, h2, h3{
     color: var(--title);
 }
 
+img{
+    object-fit: cover;
+}
+
 h2{
     text-align: center;
     font-size: clamp(2rem, 4vw, 2.5rem);

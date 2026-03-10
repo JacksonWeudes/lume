@@ -21,7 +21,7 @@ img{
 .header{
     position: fixed;
     width: 100%;
-    padding: .5rem 1rem;
+    padding: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -312,6 +312,10 @@ img{
     padding-block: 3rem 0;
 }
 
+.about img{
+    object-fit: cover;
+}
+
 .about-text{
     padding: 1rem 1.5rem;
     background-color: var(--accent);
@@ -589,7 +593,7 @@ img{
     text-decoration: underline;
 }
 
-@media screen and (min-width: 769px) and (max-width: 999px){
+@media screen and (min-width: 768px) and (max-width: 992px){
     .mobile-icon{
         display: none;
     }
@@ -597,16 +601,36 @@ img{
         display: block;
     }
     .menu-desktop button{
-        display: none;
+       display: none;
+    }
+
+    .hero-left{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
     }
 
     .services-box{
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
     }
+
+    .about p{
+        width: 60%;
+        margin: auto;
+        margin-block: 1rem;
+    }
 }
 
-@media screen and (min-width: 992px){
+@media screen and (min-width: 1200px){
+    .header img{
+        margin-left: 3rem;
+        height: 100%;
+    }
+
     .mobile-icon{
         display: none;
     }
@@ -623,6 +647,7 @@ img{
     .hero-left{
         background: none;
         background-color: var(--accent);
+        padding-left: 3rem;
     }
 
     .services-box{
@@ -631,7 +656,7 @@ img{
     }
     .services-card{
         width: 90%;
-        height: 80dvh;
+        height: 70dvh;
     }
 
     .about{
