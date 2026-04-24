@@ -69,6 +69,7 @@ img{
 
 .menu-desktop{
     display: none;
+    margin-right: 3rem;
 }
 .menu-desktop a{
     position: relative;
@@ -90,7 +91,6 @@ img{
 .menu-desktop a:hover::before{
     width: 100%;
 }
-
 .menu-desktop button{
     width: 170px;
     padding-block: 15px;
